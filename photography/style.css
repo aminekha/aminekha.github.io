@@ -46,6 +46,7 @@ body {
     font-family: 'Louis George Cafe', sans-serif;
     font-size: 16px;
     background: #f6f7fa;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 .container {
@@ -1711,6 +1712,10 @@ video.player {
 /*-----------------------------------------------------------------------------------*/
 .flickity {
 	opacity: 0;
+}
+
+.wrapper, .flickity-carousel {
+    overflow-y: hidden;
 }
 .flickity img {
 	border-radius: 4px;
