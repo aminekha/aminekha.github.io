@@ -119,6 +119,15 @@ $(document).ready(function() {
 				var flktyLength = ("0" + flkty.slides.length).slice(-2);
 				$status.html( '<span>' + slideNumber + '</span>/<span>' + flktyLength + '</span>' );
 			}
+            var progress = document.querySelector(".progress");
+    progress.oninput = function() {
+      
+      var carouselParent = document.getElementsByClassName("flickity-slider")[0];
+      var index = carouselParent.childElementCount;
+      var value = Math.floor(this.value * (index / 100));
+      
+      flkty.select( value );
+    }
 			updateStatus();
 			var $caption = $container.find('.flickity-caption');
 				$carousel.on( 'select.flickity', function() {
@@ -127,6 +136,7 @@ $(document).ready(function() {
 			});
 		});
 	}
+
 	enableFlickitySlider();
 	enableFlickityCarousel();
     /*-----------------------------------------------------------------------------------*/
