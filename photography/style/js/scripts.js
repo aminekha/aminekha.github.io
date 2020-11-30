@@ -127,7 +127,7 @@ $(document).ready(function() {
               freeScrollFriction: 0.03,
 			  pageDots: false,
               prevNextButtons: false,
-              fullscreen: true,
+              fullscreen: false,
               cellAlign: 'left',
 			  // fullscreen: $container.hasClass('fullscreen') ? true : false
 		    });
