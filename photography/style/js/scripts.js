@@ -125,6 +125,7 @@ $(document).ready(function() {
 			  wrapAround: false,
               freeScroll: true,
               selectedAttraction: 0.01,
+              freeScrollFriction: 0.03,
               friction: 0.15,
 			  pageDots: false,
               prevNextButtons: false,
