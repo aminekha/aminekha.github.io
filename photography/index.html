@@ -19,9 +19,16 @@
 </head>
 <body>
   <div class="content-wrapper">
-    <div style="height: 20px; width: 40px;" class="nav-toggle">
-      <div class="nav-toggle-bar"></div>
-      <a target="_blank" href="https://www.instagram.com/evan_almighty1"><i style="position: absolute; font-size: 30px; color: white; top: 50px;" class="fa fa-instagram"></i></a>
+    <div style="justify-content: flex-end;" class="row">
+      <div style="height: 20px; width: 40px;" class="nav-toggle">
+        <div class="nav-toggle-bar"></div>
+        <a target="_blank" href="https://www.instagram.com/evan_almighty1"><i style="position: absolute; font-size: 30px; color: white; top: 50px;" class="fa fa-instagram"></i></a>
+      </div>
+      <div class="scroll-block row">
+        <span style="display: none;" class="arrow left-arrow">&#10229;</span>
+        <p class="scroll-text">SCROLL</p>
+        <span class="arrow right-arrow">&#8594;</span>
+      </div>
     </div>
     <nav class="nav">
       <ul>
@@ -34,7 +41,7 @@
     <div class="wrapper light-wrapper">
       <div class="flickity-carousel-container fullscreen">
         <div id="flickity-carousel" class="flickity flickity-carousel flickity-viewport-mode">
-          <div class="item mr-0"><h5 style="color:white; line-height: 1;position: absolute;top:120px;left:1.6em;text-align: left;">EVAN <br>HENDERSON</h5><img src="style/images/art/art1.jpg"/></div>
+          <div class="item mr-0"><h5 id="name" style="color:white; line-height: 1;position: absolute;top:120px;left:1.6em;text-align: left;">EVAN <br>HENDERSON</h5><img src="style/images/art/art1.jpg"/></div>
           <div class="item mr-0"><img src="style/images/art/art2.jpg" alt="" /></div>
           <div class="item mr-0"><img src="style/images/art/art3.jpg" alt="" /></div>
           <div class="item mr-0"><img src="style/images/art/art4.jpg" alt="" /></div>
@@ -68,6 +75,7 @@
   <script src="style/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script src="style/revolution/js/extensions/revolution.extension.video.min.js"></script>
   <script src="style/js/plugins.js"></script>
+  <script src="style/js/swipe.js"></script>
   <script src="style/js/scripts.js"></script>
 </body>
 </html>

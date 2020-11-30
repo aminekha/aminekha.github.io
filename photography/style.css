@@ -5858,3 +5858,23 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: white;
 }
+
+.scroll-block {
+    color: white;
+    position: absolute;
+    z-index: 99;
+    right: 25px;
+    font-weight: 500;
+    top: 20px;
+    mix-blend-mode: difference;
+}
+
+.left-arrow {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.right-arrow {
+    font-size: 32px;
+    margin-left: 5px;
+}

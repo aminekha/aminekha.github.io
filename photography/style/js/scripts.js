@@ -3,7 +3,23 @@ $(document).ready(function() {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`); 
+
+
+    document.addEventListener('swiped-right', function(e) {
+        $("#name").fadeIn("slow");
+    });
+
+    document.addEventListener('swiped-left', function(e) {
+        $("#name").fadeOut("slow");
+    });
+
+    document.addEventListener('swiped-left', function(e) {
+        $(".left-arrow").fadeIn("slow");
+    });
+
+
+
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER
     /*-----------------------------------------------------------------------------------*/
