@@ -5865,18 +5865,23 @@ input[type=range]:focus::-ms-fill-upper {
     z-index: 99;
     right: 25px;
     font-weight: 500;
-    top: 20px;
     mix-blend-mode: difference;
+}
+
+.scroll-text {
+    margin-top: 18px;
 }
 
 .left-arrow {
     font-size: 28px;
     margin-right: 5px;
+    margin-top: 16px;
 }
 
 .right-arrow {
     font-size: 32px;
     margin-left: 5px;
+    margin-top: 18px;
 }
 
 button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-view {
