@@ -124,9 +124,10 @@ $(document).ready(function() {
 			  percentPosition: false,
 			  wrapAround: false,
               freeScroll: true,
+              freeScrollFriction: 0.03,
 			  pageDots: false,
               prevNextButtons: false,
-              fullscreen: false,
+              fullscreen: true,
               cellAlign: 'left',
 			  // fullscreen: $container.hasClass('fullscreen') ? true : false
 		    });

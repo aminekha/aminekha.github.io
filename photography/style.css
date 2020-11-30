@@ -5878,3 +5878,7 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 32px;
     margin-left: 5px;
 }
+
+button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-view {
+    margin-top: 40px;
+}
