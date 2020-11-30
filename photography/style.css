@@ -5584,8 +5584,7 @@ pre {
     }
 	.flickity-carousel.flickity-viewport-mode img {
         height: 100vh;
-	    -moz-osx-height: 50vh;
-        -moz-height: 50vh;
+        -webkit-height: 95vh;
 	}
     .cube-inline-5 h3 {
 	    font-size: 24px;
