@@ -19,6 +19,16 @@ $(document).ready(function() {
     });
 
 
+    $('.variable-width').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: true,
+      mobileFirst: true,
+    });
+
 
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER
