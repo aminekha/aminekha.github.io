@@ -19,6 +19,7 @@ $(document).ready(function() {
     });
 
     var swiper = new Swiper('.swiper-container', {
+        zoom: true,
       slidesPerView: 'auto',
       spaceBetween: 0,
       freeMode: true,
