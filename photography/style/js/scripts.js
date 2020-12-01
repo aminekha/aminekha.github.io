@@ -22,7 +22,7 @@ $(document).ready(function() {
       slidesPerView: 'auto',
       spaceBetween: 0,
       freeMode: true,
-      freeModeMomentumVelocityRatio: 0.998,
+      freeModeMomentumVelocityRatio: 1.2,
       autoWidth: true,
       mousewheel: true,
       scrollbar: {
