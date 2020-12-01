@@ -19,16 +19,17 @@ $(document).ready(function() {
     });
 
     var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  freeMode: true,
-  autoWidth: true,
-  mousewheel: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: true,
+      autoWidth: true,
+      mousewheel: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+        draggable: true,
+      },
+    });
 
 
     /*-----------------------------------------------------------------------------------*/
@@ -153,15 +154,7 @@ $(document).ready(function() {
 				var flktyLength = ("0" + flkty.slides.length).slice(-2);
 				$status.html( '<span>' + slideNumber + '</span>/<span>' + flktyLength + '</span>' );
 			}
-            var progress = document.querySelector(".progress");
-    progress.oninput = function() {
-      
-      var carouselParent = document.getElementsByClassName("flickity-slider")[0];
-      var index = carouselParent.childElementCount;
-      var value = Math.floor(this.value * (index / 100));
-      
-      flkty.select( value );
-    }
+
 			updateStatus();
 			var $caption = $container.find('.flickity-caption');
 				$carousel.on( 'select.flickity', function() {

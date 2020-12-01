@@ -5758,6 +5758,7 @@ input[type=range] {
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
   padding: 0 70px;
+  z-index: 3;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -5895,4 +5896,21 @@ input[type=range]:focus::-ms-fill-upper {
 
 button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-view {
     margin-top: 40px;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    background: #ffffff54;
+    width: 80% !important;
+    height: 2px !important;
+    z-index: 50;
+    bottom: 20px !important;
+    left: 10% !important;
+}
+
+.swiper-scrollbar-drag {
+    top: -7px !important;
+    height: 16px !important;
+    width: 16px !important;
+    border-radius: 50% !important;
+    background: #ffffff9c !important;
 }
