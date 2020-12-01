@@ -16,8 +16,8 @@
   <link rel="stylesheet" type="text/css" href="style/css/color/lavender.css">
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style/css/font/font4.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
   <div class="content-wrapper">
@@ -41,11 +41,16 @@
       </ul>
     </nav>
     <div class="wrapper light-wrapper">
-      <div class="variable-width">
-  <div><img src="style/images/art/art1.jpg" alt="" /></div>
-  <div><img src="style/images/art/art2.jpg" alt="" /></div>
-  <div><img src="style/images/art/art3.jpg" alt="" /></div>
-  <div><img src="style/images/art/art4.jpg" alt="" /></div>
+      <div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="style/images/art/art1.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="style/images/art/art2.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="style/images/art/art3.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="style/images/art/art4.jpg" alt="" /></div>
+    
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
 </div>
       <!-- /.flickity-carousel-container -->
       <input class="progress" type="range" min="1" max="100" value="30">
@@ -75,6 +80,7 @@
   <script src="style/js/plugins.js"></script>
   <script src="style/js/swipe.js"></script>
   <script src="style/js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

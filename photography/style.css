@@ -1059,8 +1059,12 @@ li.is-selected {
     min-height: -webkit-fill-available;
 }
 
-.slick-slide, .slick-slide img {
-    height: calc(var(--vh, 1vh) * 100); !important;
+.swiper-slide {
+    width: auto !important;
+}
+
+.swiper-slide img {
+    height: 100vh;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	07. BUTTON

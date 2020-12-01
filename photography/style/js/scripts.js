@@ -18,16 +18,17 @@ $(document).ready(function() {
         $(".left-arrow").fadeIn("slow");
     });
 
-
-    $('.variable-width').slick({
-      dots: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 1,
-      centerMode: false,
-      variableWidth: true,
-      mobileFirst: true,
-    });
+    var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  freeMode: true,
+  autoWidth: true,
+  mousewheel: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
 
     /*-----------------------------------------------------------------------------------*/
