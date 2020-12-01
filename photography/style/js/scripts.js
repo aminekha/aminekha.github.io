@@ -22,6 +22,8 @@ $(document).ready(function() {
       slidesPerView: 'auto',
       spaceBetween: 0,
       freeMode: true,
+      freeModeMomentumVelocityRatio: 1.5,
+      freeModeMomentumRatio: 3,
       autoWidth: true,
       mousewheel: true,
       scrollbar: {
