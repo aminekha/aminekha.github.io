@@ -1061,7 +1061,7 @@ li.is-selected {
 
 .swiper-slide {
     width: auto !important;
-    margin-right: 0 !important;
+    margin-right: -2px !important;
 }
 
 .swiper-slide img {
