@@ -20,10 +20,11 @@ $(document).ready(function() {
 
     var swiper = new Swiper('.swiper-container', {
         zoom: true,
+        mode:'horizontal',
       slidesPerView: 'auto',
       spaceBetween: 0,
       freeMode: true,
-      freeModeMomentumVelocityRatio: 1.2,
+      freeModeMomentumVelocityRatio: 0.7,
       autoWidth: true,
       mousewheel: true,
       scrollbar: {
