@@ -24,9 +24,10 @@ $(document).ready(function() {
       slidesPerView: 'auto',
       spaceBetween: 0,
       freeMode: true,
-      freeModeMomentumVelocityRatio: 0.7,
+      freeModeMomentumVelocityRatio: 1,
       autoWidth: true,
       mousewheel: true,
+      freeModeFluid: true,
       scrollbar: {
         el: '.swiper-scrollbar',
         hide: false,
