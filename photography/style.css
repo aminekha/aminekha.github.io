@@ -5911,3 +5911,13 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
     border-radius: 50% !important;
     background: #ffffff9c !important;
 }
+
+.swiper-scrollbar-drag::after {
+    content: '';
+    position: absolute;
+     top: -50%;
+    left: -50%;
+     width: 200%;
+    height: 200%;
+    padding: 50px;
+}
