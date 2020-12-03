@@ -43,6 +43,20 @@ window.addEventListener('resize', () => {
       },
     });
 
+    var swiperDesktop = new Swiper('.swiper-container-desktop', {
+        zoom: true,
+        mode:'horizontal',
+      spaceBetween: 0,
+      freeMode: false,
+      autoWidth: true,
+      mousewheel: true,
+      freeModeFluid: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
 
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER
@@ -1401,12 +1415,14 @@ window.addEventListener('resize', () => {
 
 
 // Menu
+
 (function() {
 
   var hamburger = {
     navToggle: document.querySelector('.nav-toggle'),
     navToggleBar: document.querySelector('.nav-toggle-bar'),
     nav: document.querySelector('nav'),
+    body: document.querySelector('.wrapper'),
 
     doToggle: function(e) {
       e.preventDefault();
@@ -1416,5 +1432,10 @@ window.addEventListener('resize', () => {
   };
 
   hamburger.navToggleBar.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  hamburger.body.addEventListener('click', function(e) { 
+    if(hamburger.navToggle.classList.contains("expanded")) {
+        hamburger.doToggle(e); 
+    }
+    });
 
 }());

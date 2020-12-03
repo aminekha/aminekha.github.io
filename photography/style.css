@@ -5898,13 +5898,13 @@ input[type=range]:focus::-ms-fill-upper {
 .left-arrow {
     font-size: 28px;
     margin-right: 5px;
-    margin-top: 18px;
+    margin-top: 16px;
 }
 
 .right-arrow {
     font-size: 28px;
     margin-left: 5px;
-    margin-top: 18px;
+    margin-top: 16px;
 }
 
 button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-view {
@@ -5936,4 +5936,56 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
      width: 200%;
     height: 200%;
     padding: 50px;
+}
+
+
+/* Desktop version */
+@media only screen and (min-width: 768px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    .mobile-wrapper {
+        display: none;
+    }
+
+    .menu-wrapper {
+        position: absolute;
+        z-index: 99;
+        mix-blend-mode: difference;
+    }
+
+    li a {
+        color: white;
+    }
+
+    li {
+        list-style: none;
+    }    
+
+    span {
+        display: block;
+        height: 17px;
+    }
+
+    #name, a {
+        padding-left: 15px;
+    }
+
+    #name {
+        margin-top: 30px;
+    }
+
+    .swiper-slide {
+        width: -webkit-fill-available !important;
+    }
+
+    .swiper-button-next {
+        right: 100px !important;
+    }
+
+    .swiper-button-prev {
+        left: 100px !important;
+        z-index: 100 !important;
+    }
 }
