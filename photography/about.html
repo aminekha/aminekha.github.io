@@ -17,11 +17,29 @@
   <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="style/css/font/font4.css">
 </head>
+<style type="text/css">
+  .nav-toggle .nav-toggle-bar, .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #9e9e9e;
+    content: '';
+    height: 0.4rem;
+    width: 100%;
+  }
+</style>
 <body>
   <div class="content-wrapper">
-    <div style="height: 20px; width: 40px; position: " class="nav-toggle">
+    <div style="height: 20px; width: 40px; mix-blend-mode: unset;" class="nav-toggle">
       <div class="nav-toggle-bar"></div>
-      <a target="_blank" href="https://www.instagram.com/evan_almighty1"><i style="position: absolute; font-size: 30px; color: white; top: 50px;" class="fa fa-instagram"></i></a>
+      <a target="_blank" href="https://www.instagram.com/evan_almighty1"><i style="position: absolute; font-size: 30px; color: #9e9e9e; top: 50px;" class="fa fa-instagram"></i></a>
     </div>
     <nav class="nav">
       <ul>
