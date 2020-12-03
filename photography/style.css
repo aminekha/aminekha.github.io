@@ -5990,7 +5990,7 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
     }
 
     img.full-screen {
-        object-fit: unset;
+        object-fit: unset !important;
         width: 100vw;
         height: 100vh;
     }
