@@ -1,3 +1,14 @@
+@font-face {
+font-family: "Century Gothic";
+src: url("style/fonts/Century Gothic.ttf");
+}
+
+@font-face {
+font-family: "AvenirNextLTPro-Regular";
+src: url("style/fonts/AvenirNextLTPro-Regular.otf");
+}
+
+
 *,
 *:before,
 *:after {
@@ -826,6 +837,7 @@ acronym[title] {
     color: black;
     font-weight: bold;
     font-size: 22px;
+    font-family: 'Century Gothic';
 }
 /*-----------------------------------------------------------------------------------*/
 /*	04. STICKY HEADER
@@ -5878,16 +5890,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .scroll-text {
     margin-top: 18px;
+    font-family: 'Century Gothic';
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .left-arrow {
     font-size: 28px;
     margin-right: 5px;
-    margin-top: 16px;
+    margin-top: 18px;
 }
 
 .right-arrow {
-    font-size: 32px;
+    font-size: 28px;
     margin-left: 5px;
     margin-top: 18px;
 }
