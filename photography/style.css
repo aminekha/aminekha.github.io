@@ -5941,8 +5941,8 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
 
 /* Desktop version */
 @media only screen and (min-width: 768px) {
-    body {
-        overflow-y: hidden;
+    body, .desktop-wrapper {
+        overflow: hidden;
     }
 
     .mobile-wrapper {
@@ -5987,5 +5987,11 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
     .swiper-button-prev {
         left: 100px !important;
         z-index: 100 !important;
+    }
+
+    img.full-screen {
+        object-fit: unset;
+        width: 100vw;
+        height: 100vh;
     }
 }
