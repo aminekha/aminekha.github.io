@@ -48,6 +48,8 @@ window.addEventListener('resize', () => {
         mode:'horizontal',
       spaceBetween: 0,
       freeMode: false,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
       autoWidth: true,
       mousewheel: true,
       freeModeFluid: true,

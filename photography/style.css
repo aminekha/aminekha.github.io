@@ -5938,6 +5938,12 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
     padding: 50px;
 }
 
+@media only screen and (max-width: 767px) {
+    .desktop-wrapper {
+        display: none;
+    }
+}
+
 
 /* Desktop version */
 @media only screen and (min-width: 768px) {
@@ -5965,11 +5971,13 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
 
     span {
         display: block;
-        height: 2.15vh;
+        height: 2.4vh;
         font-size: 2.5vh;
+        font-family: 'Century Gothic';
+        font-weight: bold;
     }
 
-    #name, a {
+    #name, i {
         padding-left: 15px;
     }
 
@@ -6006,5 +6014,17 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
     -o-object-fit: contain !important;
     object-fit: cover !important;
     width: 100%;
+    }
+
+    li {
+        margin-top: 15%;
+        width: 25px;
+        margin-right: 0 !important;
+    }
+
+    span.selected {
+        border-right: 1px solid white;
+        width: 25px;
+        height: 100% !important;
     }
 }
