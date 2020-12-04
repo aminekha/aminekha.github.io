@@ -49,6 +49,7 @@ window.addEventListener('resize', () => {
       spaceBetween: 0,
       freeMode: false,
       effect: 'fade',
+      loop: true,
       fadeEffect: { crossFade: true },
       autoWidth: true,
       mousewheel: true,
