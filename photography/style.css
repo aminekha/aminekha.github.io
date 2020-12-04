@@ -6022,9 +6022,14 @@ button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-vie
         margin-right: 0 !important;
     }
 
-    span.selected {
-        border-right: 1px solid white;
-        width: 25px;
-        height: 100% !important;
+    a.selected {
+        color: #7498ca;
     }
+
+
 }
+
+h2 {
+        font-family: 'Century Gothic' !important;
+        font-weight: bold;
+    }
