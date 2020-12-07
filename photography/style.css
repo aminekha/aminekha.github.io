@@ -1025,7 +1025,7 @@ acronym[title] {
 
 .nav-toggle .nav-toggle-bar::before { margin-top: -0.8rem; }
 
-.nav-toggle.expanded .nav-toggle-bar { background: transparent; }
+.nav-toggle.expanded .nav-toggle-bar { background: transparent; border: none !important; }
 
 .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
   background: white;
@@ -5894,21 +5894,21 @@ input[type=range]:focus::-ms-fill-upper {
     font-family: 'Century Gothic';
     font-size: 15px;
     font-weight: 600;
-    text-shadow: 0 0 3px #000;
+    text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .left-arrow {
     font-size: 28px;
     margin-right: 5px;
     margin-top: 16px;
-    text-shadow: 0 0 3px #000;
+    /*text-shadow: 0 0 3px #000;*/
 }
 
 .right-arrow {
     font-size: 28px;
     margin-left: 5px;
     margin-top: 16px;
-    text-shadow: 0 0 3px #000;
+    /*text-shadow: 0 0 3px #000;*/
 }
 
 button.flickity-button.flickity-fullscreen-button.flickity-fullscreen-button-view {
