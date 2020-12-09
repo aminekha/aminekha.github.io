@@ -1028,7 +1028,7 @@ acronym[title] {
 .nav-toggle.expanded .nav-toggle-bar { background: transparent; border: none !important; }
 
 .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
-  background: white;
+  background: black;
   margin-top: 0;
 }
 
@@ -6048,3 +6048,8 @@ h2 {
     .desktop-wrapper .menu-wrapper {
         mix-blend-mode: difference; 
     }
+
+    .nav-toggle.expanded i {
+    color: black !important;
+    text-shadow: none !important;
+}
