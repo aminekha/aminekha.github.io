@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fireopps Agency</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Fireopps Agency">
+    <meta name="keywords" content="fireopps, fireopps agency, marketing, personal branding">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="../assets/favicon/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== undefined && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+
+
+    </script>
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #121519;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #6f788b;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            background-color: #d7dde2;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            background-color: rgba(255, 255, 255, .25);
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1500);
+            };
+        })();
+
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/img-comparison-slider/dist/styles.css" />
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css" />
+    <link rel="stylesheet" media="screen" href="../assets/vendor/lightgallery/css/lightgallery-bundle.min.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper">
+        <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+        <header class="navbar navbar-expand-lg fixed-top bg-light">
+            <div class="container">
+                <a class="navbar-brand pe-sm-3" href="index.html">
+                    <span class="text-primary flex-shrink-0 me-2">
+                        <img class="logo" src="../assets/logo/logo.svg" />
+                    </span>
+                    Fireopps
+                </a>
+                <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+                    <input class="form-check-input" type="checkbox" id="theme-mode">
+                    <label class="form-check-label" for="theme-mode"><i class="ai-sun fs-lg"></i></label>
+                    <label class="form-check-label" for="theme-mode"><i class="ai-moon fs-lg"></i></label>
+                </div>
+
+                <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <nav class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+                        <li class="nav-item"><a class="nav-link" href="#">Course</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Agency</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Page content-->
+        <!-- Hero-->
+        <section class="position-relative pt-5">
+            <div class="position-absolute top-0 start-0 w-100" style="height: 79%;">
+                <div class="bg-primary position-absolute top-0 start-0 w-100 h-100"></div>
+                <div class="position-absolute start-0 bottom-0 w-100 overflow-hidden mb-n1"
+                    style="padding-bottom: 6.2%; color: var(--ar-body-bg);">
+                    <svg class="position-absolute start-0 bottom-0 w-100 h-100" viewBox="0 0 3000 185.4"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor"
+                            d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
+                    </svg>
+                </div>
+            </div>
+            <svg class="position-absolute end-0 zindex-2 mt-4 mt-sm-5" width="836" height="755" fill="none"
+                stroke="white" stroke-miterlimit="10" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M21.253 754.495c-18.309-66.796-31.642-139.581-6.067-203.929 33.531-84.307 126.54-131.543 216.622-142.348 90.082-10.831 180.803 7.052 271.284 13.945s187.376.931 261.969-50.776C868.476 299.694 902.433 159.981 995.762 75.54 1073.58 5.151 1191.04-18.081 1289.8 17.446M89.774 754.494c-17.324-63.177-29.938-132.049-5.748-192.911 31.722-79.756 119.701-124.438 204.913-134.657 85.239-10.246 171.036 6.68 256.621 13.2s177.263.878 247.812-48.035c97.852-67.835 129.947-199.99 218.248-279.853 73.61-66.584 184.74-88.565 278.15-54.954M158.305 754.496c-16.313-59.585-28.235-124.492-5.402-181.894 29.912-75.206 112.862-117.333 193.231-126.966 80.368-9.661 161.269 6.307 241.983 12.427 80.715 6.148 167.151.825 233.655-45.293 92.264-63.949 122.522-188.574 205.768-263.886 69.4-62.805 174.17-83.509 262.26-51.814M226.834 754.495c-15.328-55.965-26.532-116.96-5.083-170.876 28.103-70.655 106.023-110.228 181.521-119.276 75.499-9.074 151.503 5.908 227.321 11.683s157.011.772 219.497-42.553c86.675-60.09 115.097-177.157 193.31-247.891 65.2-59 163.64-78.453 246.37-48.674M295.359 754.495c-14.344-52.372-24.802-109.429-4.763-159.859 26.266-66.104 99.183-103.122 169.812-111.584 70.628-8.489 141.736 5.535 212.657 10.937s146.899.719 205.366-39.811c81.087-56.205 107.699-165.741 180.859-231.925 60.99-55.193 153.1-73.396 230.48-45.533"
+                    stroke-opacity=".12"></path>
+            </svg>
+            <div class="container dark-mode position-relative zindex-5 pt-5 mt-4 mt-lg-5">
+                <div class="row justify-content-center text-center pt-md-2 pt-lg-0 pt-xl-2 pb-5 mb-md-2">
+                    <div class="col-lg-10 col-xl-9 col-xxl-10">
+                        <span class="badge bg-faded-light fs-sm text-white px-3 mb-4">For B2B Business Owners</span>
+                        <h1 class="display-3 mb-sm-4">The Most Important Strategy Nobody Taught You About Tripling Your
+                            Leads</h1>
+                        <p class="pb-3 mb-3 mb-lg-4 text-white">Skyrocket Your Revenue Without Spending a Dime on Ads!
+                        </p>
+                    </div>
+                </div>
+                <div class="position-relative">
+                    <img src="../assets/img/landing/product/video-cover.jpg" class="d-block rounded-5"
+                        alt="Video cover">
+                    <div class="d-nline-flex position-absolute top-50 start-50 translate-middle zindex-2 p-4">
+                        <a href="https://www.youtube.com/watch?v=udMULpKcnn8"
+                            class="btn btn-icon btn-xl btn-primary rounded-circle stretched-link"
+                            data-bs-toggle="video">
+                            <i class="ai-play-filled"></i>
+                        </a>
+                    </div>
+                </div>
+                <div style="display: grid;" class="justify-content-center">
+                    <a class="btn btn-lg btn-warning mt-5" href="#book">Apply to work with me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features list-->
+        <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-4 my-xxl-5">
+            <div class="row justify-content-center pt-2 pt-sm-3 pt-md-4 mt-lg-2 pb-lg-2 pb-xl-0">
+                <div class="col-sm-11 col-md-9 col-lg-8 col-xl-7 col-xxl-6 text-center">
+                    <h2 class="h1 mb-0">I was “Working” Myself To Death … But Barely Getting Anything Done!</h2>
+                </div>
+            </div>
+            <br>
+            <p class="fs-xl">
+                That's because you didn't know this strategy.
+                <br><br>
+                This 7-step strategy is so powerful you will wish nobody else knows about it.
+                <br><br>
+                But I can't hide it for too long.
+                <br><br>
+                If you're reading this page … Then you're one of the first business owners to know about this strategy.
+                <br><br>
+                I'll show you the exact process to never worry about revenue and getting new clients.
+                <br><br>
+                You will have a daily flow of clients waiting to talk to you and fighting for a 30-minute call with you.
+                <br><br>
+                You will look at other agency owners who're BEGGING for a 15-minute call using cold email. They're
+                sending thousands and thousands of cold emails to the same prospects to get a handful of replies every
+                month while you get to choose who you want to work with.
+                <br><br>
+                Doesn't that sound unfair?
+                <br><br>
+                Maybe.
+                <br><br>
+                But that's the cost of not knowing this strategy.
+                <br><br>
+                So it's up to you.
+                <br><br>
+                You either do something … Or do nothing.
+                <br><br>
+                What do you want?
+                <br><br>
+                Enough of talking.
+                <br><br>
+                I'm about to show you the exact same process I follow with my clients and my businesses. It's the exact
+                same process I will apply to your business if we end up working together.
+                <br><br>
+                Don't forget to save it on your phone.
+                <br><br>
+                <b>It's priceless</b>
+                <br><br>
+                Here's the 7-step strategy that will triple your revenue and get you an unlimited flow of clients every
+                month.
+            </p>
+            <div>
+                <img style="display: block; margin: 0 auto;" src="https://i.imgur.com/G7zUye9.png">
+                <img style="display: block; margin: 0 auto;" src="https://i.imgur.com/60JadGO.png">
+            </div>
+            <br><br>
+            <p class="fs-xl">
+                You won't spend a dime on ads.
+                <br><br>
+                And this strategy is only available here.
+                <br><br>
+                Thanks to this strategy you will never work with cold prospects again.
+                <br><br>
+                Even the COLDEST prospects in the world will become WARM.
+            </p>
+            <h2 class="text-center pt-5 pb-3 mb-lg-4 mt-lg-3 mt-xl-4 mt-xxl-5">Here's the deal <br>I will help you
+                triple your business revenue in the next 3-6 months</h2>
+            <p class="fs-xl">
+                I already showed you the process above.
+                <br><br>
+                So why would you want to work with me?
+                <br><br>
+                You can just take the process and apply it to your business and triple your revenue in no time.
+                <br><br>
+                You will have to only put 2.5 hours of work every day.
+                <br><br>
+                OR…
+                <br><br>
+                Work with me and I'll do it all for you.
+                <br><br>
+                You will still have some work to do.
+                <br><br>
+                A work that will only take you 25 minutes per day.
+                <br><br>
+                Think about it for a minute.
+                <br><br>
+                Oh wait.
+                <br><br>
+                If you need to think about it … You're probably not my ideal client.
+                <br><br>
+                My ideal client doesn't have to think about this irresistible offer.
+                <br><br>
+                Time vs. Money.
+                <br><br>
+                Work 2.5 hours to triple your revenue.
+                <br><br>
+                OR…
+                <br><br>
+                Work 25 minutes to triple your revenue.
+                <br><br>
+                Which one looks like a better investment to you?
+                <br><br>
+                <b>Wait a minute</b>
+                <br><br>
+                I forgot something…
+            </p>
+            <h2 class="text-center pt-5 pb-3 mb-lg-4 mt-lg-3 mt-xl-4 mt-xxl-5">What if you don't end up tripling your
+                revenue?</h2>
+            <p class="fs-xl">
+                Well …
+                <br><br>
+                That's a good question … I have to admit.
+                <br><br>
+                I will work with you for free until you do.
+                <br><br>
+                Have another objection?
+                <br><br>
+                Can you find someone else in the world to give you this guarantee?
+                <br><br>
+                Can you find someone who will
+                <br><br>
+                1. Triple your revenue
+                2. Automate your business
+                3. Build your personal brand on social media
+                4. While offering a no-brainer guarantee
+                <br><br>
+                Can you?
+                <br><br>
+                I don't think so.
+                <br><br>
+                I believe we're into something here.
+                <br><br>
+                How did I know?
+                <br><br>
+                Because you've reached the end of the page.
+                <br><br>
+                That means you're interested.
+                <br><br>
+                <b>That's why I have a gift for you</b>
+                <br><br>
+                But don't tell those who didn't read to the end.
+                <br><br>
+                I don't want them to get upset on me.
+                <br><br>
+                Deal?
+                <br><br>
+                DEAL.
+                <br><br>
+                Because you sticked to the end I will show you the exact process step by step and month by month.
+                <br><br>
+                I will not hide anything from you.
+                <br><br>
+                By the end:
+                <br><br>
+                1. We either work together
+                2. Or you get this process for free
+                <br><br>
+                Okay?
+                <br><br>
+                So let's dive in.
+            </p>
+        </section>
+
+        <section class="overflow-hidden pt-5 mt-md-3 mt-lg-2 mt-xl-4 mt-xxl-5">
+            <div class="container pt-2 pt-sm-4 pt-lg-5">
+                <h2 class="h1 text-center pb-3 mb-3 mb-lg-4">Step by step</h2>
+                <!-- Step-->
+                <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+                    <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-left"
+                        data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img
+                            class="d-dark-mode-none" src="../assets/img/landing/saas-2/steps/01-light.png" width="525"
+                            alt="Image"><img class="d-none d-dark-mode-block"
+                            src="../assets/img/landing/saas-2/steps/01-dark.png" width="525" alt="Image"></div>
+                    <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right"
+                        data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+                        <div class="pe-md-4 pe-lg-0"><span
+                                class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 01</span>
+                            <h3 class="h2 mb-3 mb-lg-4">Onboarding</h3>
+                            <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                                Every strategy needs a plan.
+                                <br><br>
+                                We will start by creating a tailored plan for your business. A plan consists of 3 main
+                                parts:
+                                <br><br>
+                            <ul>
+                                <li>Positioning and offer creation: What do you want to be known for? And what are you
+                                    offering to your clients. This also includes picking a niche.</li>
+                                <li>Ideal Client Profile: Who are you talking to? What are their pain points? And where
+                                    do
+                                    they engage?</li>
+                                <li>Content plan: We will create a monthly, weekly, and daily plan for your social media
+                                    accounts based on your positioning, offer, and ICP.</li>
+                            </ul>
+                            <br>
+                            This part is the base of the 7-step framework. It's what will make or break the rest of
+                            our strategy. So take your time and get them right before moving to the next step.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arrow-->
+                <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500"
+                    data-aos-offset="250">
+                    <svg class="d-block text-primary" width="339" height="365" viewBox="0 0 339 365" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="margin-left: -150px; margin-top: -140px; margin-bottom: -108px;">
+                        <path d="M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606" stroke="url(#arrow1)"
+                            stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+                        <path
+                            d="M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z"
+                            fill="currentColor"></path>
+                        <defs>
+                            <linearGradient id="arrow1" x1="324" y1="291.5" x2="-2.99974" y2="72.4997"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"></stop>
+                                <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Step-->
+                <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+                    <div class="col-md-6 col-xl-5 offset-xl-1 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-right"
+                        data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img
+                            class="d-dark-mode-none" src="../assets/img/landing/saas-2/steps/02-light.png" width="473"
+                            alt="Image"><img class="d-none d-dark-mode-block"
+                            src="../assets/img/landing/saas-2/steps/02-dark.png" width="473" alt="Image"></div>
+                    <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1" data-aos="fade-left" data-aos-duration="500"
+                        data-aos-offset="250" data-disable-parallax-down="md">
+                        <div class="ps-md-4 ps-lg-0"><span
+                                class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 02</span>
+                            <h3 class="h2 mb-3 mb-lg-4">Month 1</h3>
+                            <p class="fs-xl">
+                                Let the fun begin.
+                                <br><br>
+                                We start our first month by building our personal brand on social media. You want to
+                                become an authority in your space in order to gain the trust and credibility of your
+                                clients.
+                                <br><br>
+                                In the first month we will focus solely on one main goal: Grow your follower base.
+                                <br><br>
+                                Your social media efforts will be focused on getting your first 500 followers.
+                                <br><br>
+                                From there, getting from 500 to 5000 will be an easier journey. Because you already have
+                                the basics.
+                                <br><br>
+                                Here's what you need to do in the 1st month:
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Share at least 3 threads &
+                                    long posts on Twitter and Linkedin every week so that's 12
+                                    long posts in the first month.</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Share at least 5 short
+                                    posts on Twitter and LinkedIn every week. So that's 20 posts in
+                                    the first month.</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Create assets like PDFs,
+                                    Docs, and Infographics and offer them for free using Auto DMs</li>
+
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Share at least 5 stories
+                                    of your wins with your audience in the first month</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Search and follow your
+                                    ideal clients on Twitter and LinkedIn. In the case of LinkedIn,
+                                    send them a connection request.</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Engage with your ideal
+                                    clients on social media for at least 10 minutes every day
+                                    (likes, comments…).</li>
+                            </ul>
+                            <br><br>
+                            This is our plan for the first month. If we work together, I'll do most of the work for
+                            you so you can focus on the more important tasks for your business.
+                            <br><br>
+                            By the end of the first month:
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>You shared 12 long posts &
+                                    Threads on LinkedIn and Twitter</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>You shared 20 short posts.
+                                </li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>You followed at least 100
+                                    ideal clients</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>You engaged with your
+                                    ideal clients for at least 5 hours (10 minutes/day * 30 days)</li>
+                            </ul>
+                            <br><br>
+                            Once you finish your goal, you can move to the 2nd month.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arrow-->
+                <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500"
+                    data-aos-offset="250">
+                    <svg class="d-block text-primary" width="263" height="275" viewBox="0 0 263 275" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="margin-top: -60px; margin-left: -120px; margin-bottom: -80px;">
+                        <path
+                            d="M8.13678 249.647C7.47108 250.081 6.59001 249.602 6.59106 248.808L6.60444 238.689C6.60544 237.931 7.4158 237.45 8.08162 237.811L16.5478 242.408C17.2136 242.77 17.2512 243.712 16.6163 244.125L8.13678 249.647Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M261.961 37.8891C216.908 65.6243 128.226 135.486 133.916 193.05C141.029 265.005 265.134 173.468 173.666 148.634C89.2542 125.715 30.9125 210.547 13.9796 236.702"
+                            stroke="url(#arrow2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+                        <defs>
+                            <linearGradient id="arrow2" x1="13.9797" y1="234.5" x2="276.704" y2="60.1939"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"></stop>
+                                <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Step-->
+                <div class="row align-items-center position-relative">
+                    <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 d-md-flex justify-content-end pb-2 pb-md-0 mb-4 mb-md-0"
+                        data-aos="fade-left" data-aos-duration="500" data-aos-offset="250"
+                        data-disable-parallax-down="md"><img class="d-dark-mode-none"
+                            src="../assets/img/landing/saas-2/steps/03-light.png" width="473" alt="Image"><img
+                            class="d-none d-dark-mode-block" src="../assets/img/landing/saas-2/steps/03-dark.png"
+                            width="473" alt="Image"></div>
+                    <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right"
+                        data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+                        <div class="pe-md-4 pe-lg-0"><span
+                                class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 03</span>
+                            <h3 class="h2 mb-3 mb-lg-4">Month 2</h3>
+                            <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                                In your second month of this strategy, you will put yourself in front of clients and
+                                position yourself as an authority in the market.
+                                <br><br>
+                                By the end of this month, you will have at least 3 client calls and 1000 followers on
+                                Twitter and LinkedIn.
+                                <br><br>
+                                We will also continue writing the same type of content but we will add 3 new forms:
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Video tutorials</li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Authority-based strategies
+                                </li>
+                                <li class="d-flex pt-1 mt-2"><i
+                                        class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>Self-promotion content
+                                </li>
+                            </ul>
+                            <br><br>
+                            The goal of this month is to position yourself as an authority in your field and make
+                            clients aware of your service.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrow-->
+                <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500"
+                    data-aos-offset="250">
+                    <svg class="d-block text-primary" width="339" height="365" viewBox="0 0 339 365" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="margin-left: -150px; margin-top: -140px; margin-bottom: -108px;">
+                        <path d="M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606" stroke="url(#arrow1)"
+                            stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+                        <path
+                            d="M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z"
+                            fill="currentColor"></path>
+                        <defs>
+                            <linearGradient id="arrow1" x1="324" y1="291.5" x2="-2.99974" y2="72.4997"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"></stop>
+                                <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Step-->
+                <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+                    <div class="col-md-6 col-xl-5 offset-xl-1 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-right"
+                        data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img
+                            class="d-dark-mode-none" src="../assets/img/landing/saas-2/steps/02-light.png" width="473"
+                            alt="Image"><img class="d-none d-dark-mode-block"
+                            src="../assets/img/landing/saas-2/steps/02-dark.png" width="473" alt="Image"></div>
+                    <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1" data-aos="fade-left" data-aos-duration="500"
+                        data-aos-offset="250" data-disable-parallax-down="md">
+                        <div class="ps-md-4 ps-lg-0"><span
+                                class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 04</span>
+                            <h3 class="h2 mb-3 mb-lg-4">Month 3</h3>
+                            <p class="fs-xl">
+                                In month 3, we will continue our plan from the second month. However, we will reach out
+                                to your potential clients through email, LinkedIn, and Twitter DMs.
+                                <br><br>
+                                Now that you have +1000 followers on Twitter & LinkedIn, most of those followers are
+                                warm. They follow you, they know who you are, and they're aware of your service.
+                                <br><br>
+                                So when you reach out to them, there's a much higher chance they will reply, because
+                                they know you.
+                                <br><br>
+                                I suggest starting with the most engaging clients during the last 2 months. Those who
+                                like and reply to your posts the most. Those are warm leads. Reach out to them with a
+                                warm and short message and see if you can work together.
+                                <br><br>
+                                Here's an example:
+                                <br><br>
+                                Subject: Quick question, John
+                                <br>
+                                Body: Hey John,
+                                <br>
+                                quick question, are you interested in XYZ?
+                                <br>
+                                Thanks,
+                                <br>
+                                [YOUR NAME]
+                                <br><br>
+                                Simple and short messages tend to get higher reply rates.
+                                <br><br>
+                                I see a lot of mistakes made by business owners when doing outreach. So here are some
+                                advice:
+                                <br><br>
+                                - Avoid long emails and DMs.
+                                - Avoid sending long promotional messages
+                                - Avoid mentioning your price in the message. Keep the price for the call
+                                - Always pitch a call not a purchase
+                                <br><br>
+                                If you have case studies, mention them. They give you higher credibility. If you don't
+                                have case studies, offer a money-back guarantee or a free trial.
+                                <br><br>
+                                If you follow this strategy, there's now way you don't get a flow of leads who want to
+                                work with you in the next 90 - 120 days.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pt-5 pb-4 mb-2 my-lg-3 my-xl-4 my-xxl-5">
+            <p class="fs-xl">
+                So to wrap up, the 7-step framework to get unlimited leads every month using your personal brand is:
+                <br><br>
+            <ol>
+                <li>Pick a niche</li>
+                <li>Create an offer</li>
+                <li>Create a sales letter + landing page</li>
+                <li>Build a personal brand on Twitter and LinkedIn</li>
+                <li>Share valuable content</li>
+                <li>Put yourself in front of prospects</li>
+                <li>Reach out to prospects in different channels (Cold email, cold call, LinkedIn, Twitter…)</li>
+            </ol>
+            </p>
+        </section>
+
+        <!-- Industries-->
+        <section class="bg-dark dark-mode border-top border-light py-2 py-sm-3 py-md-4 py-lg-5 mt-5">
+            <div class="container py-5 my-lg-3 my-xl-4 my-xxl-5">
+                <h2 class="h1 text-center text-md-start mt-lg-n3 pb-4 pb-md-5" style="max-width: 660px;">The most
+                    important question: Is this partnership right for you?</h2>
+                <p class="fs-xl">
+                    By now, you have a good idea of how I work and what I do.
+                    <br><br>
+                    And the reason I gave away all this knowledge for free in this page is because I know that not
+                    everyone is an ideal client.
+                    <br><br>
+                    But everyone can learn something from it.
+                    <br><br>
+                    If you're my ideal client, that's great. We can work together.
+                    <br><br>
+                    If not, that's OK too. You can follow the plan by yourself or hire someone else to do it for you.
+                    <br><br>
+                    I designed this framework with a very specific, very particular set of potential clients in mind.
+                </p>
+                <div class="row pt-sm-2 pt-md-0 pt-xl-1 pt-xxl-3">
+                    <div class="col-md-6 col-xl-5 offset-xl-1 order-md-2 pb-4 pb-md-0 mb-2 mb-md-0">
+                        <!-- Images (binded content)-->
+                        <div class="binded-content" style="max-width: 526px;">
+                            <div class="binded-item active" id="marketers-image">
+                                <div class="from-bottom">
+                                    <div
+                                        class="d-flex justify-content-center position-absolute top-0 start-0 w-100 h-100">
+                                        <div class="bg-primary rounded-5 h-100" style="width: 88.2%;"></div>
+                                    </div><img class="d-block position-relative zindex-2"
+                                        src="../assets/img/landing/saas-1/industries/01.png" alt="Image">
+                                </div>
+                            </div>
+                            <div class="binded-item" id="agencies-image">
+                                <div class="from-bottom">
+                                    <div
+                                        class="d-flex justify-content-center position-absolute top-0 start-0 w-100 h-100">
+                                        <div class="bg-info rounded-5 h-100" style="width: 88.2%;"></div>
+                                    </div><img class="d-block position-relative zindex-2"
+                                        src="../assets/img/landing/saas-1/industries/02.png" alt="Image">
+                                </div>
+                            </div>
+                            <div class="binded-item" id="ecommerce-image">
+                                <div class="from-bottom">
+                                    <div
+                                        class="d-flex justify-content-center position-absolute top-0 start-0 w-100 h-100">
+                                        <div class="bg-warning rounded-5 h-100" style="width: 88.2%;"></div>
+                                    </div><img class="d-block position-relative zindex-2"
+                                        src="../assets/img/landing/saas-1/industries/03.png" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <!-- Nav tabs-->
+                        <ul class="nav nav-tabs flex-nowrap overflow-auto text-nowrap pb-3 mb-3 mb-xl-4" role="tablist">
+                            <li class="nav-item mb-0"><a class="nav-link active" href="#marketers-text"
+                                    data-bs-toggle="tab" data-binded-content="#marketers-image" role="tab">Agencies</a>
+                            </li>
+                            <li class="nav-item mb-0"><a class="nav-link" href="#agencies-text" data-bs-toggle="tab"
+                                    data-binded-content="#agencies-image" role="tab">B2B SaaS</a></li>
+                            <li class="nav-item mb-0"><a class="nav-link" href="#ecommerce-text" data-bs-toggle="tab"
+                                    data-binded-content="#ecommerce-image" role="tab">Professional Service Providers</a>
+                            </li>
+                        </ul>
+                        <!-- Tab content-->
+                        <div class="tab-content pt-lg-2 pt-xl-3">
+                            <div class="tab-pane fade show active" id="marketers-text" role="tabpanel">
+                                <h3 class="mb-lg-4">Get unlimited leads to your agency</h3>
+                                <p>I work with agency owners to help them develop a compelling personal brand that
+                                    showcases their expertise, enhances their online presence, and effectively
+                                    communicates their value proposition to potential clients.
+                                    <br><br>
+                                    Additionally, I help them implement lead-generation strategies to attract qualified
+                                    leads and nurture them into valuable business relationships.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="agencies-text" role="tabpanel">
+                                <h3 class="mb-lg-4">Get unlimited leads to your B2B SaaS</h3>
+                                <p>I work with Founders and CEOs of B2B SaaS companies who want to build a strong
+                                    personal brand to gain credibility, attract investors, and differentiate themselves
+                                    from competitors.</p>
+                            </div>
+                            <div class="tab-pane fade" id="ecommerce-text" role="tabpanel">
+                                <h3 class="mb-lg-4">Get unlimited leads to your business
+                                </h3>
+                                <p>Lawyers, accountants, consultants, coaches, and other professionals in the B2B sector
+                                    who heavily rely on their reputation and expertise to attract clients.
+                                    <br><br>
+                                    I work with service providers who have the budget to invest in personal branding and
+                                    lead generation to differentiate themselves and stand out in the competitive market.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing-->
+        <section id="book" class="bg-secondary pt-2 py-sm-3 py-md-4 py-lg-5">
+            <div class="container py-5 mt-lg-3 mt-xl-4 mt-xxl-5 mb-lg-2 mb-xl-4">
+                <h2 class="h1 text-center mt-lg-n3 mb-2 mb-sm-0">What to do next?</h2>
+                <p class="fs-xl">
+                    <br>
+                    To see if we're a good fit, schedule a 30-minute call using the box below.
+                    <br>
+                    In this call, we will:
+                <ul>
+                    <li>We will go through your business challenges</li>
+                    <li>We will go through your current business situation and where you want to be in the future</li>
+                    <li>I will ask you “Why do you want to work with me?” and “What do you want to achieve by the end of
+                        this partnership”</li>
+                    <li>If we're not a good fit, I will offer you free strategies as a gift</li>
+                    <li>I will not ask you to pay or buy anything. This is just an introductory call to see if we're a
+                        good fit</li>
+                </ul>
+                </p>
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/aminekhaoui/30min"
+                    style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
+                    async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll>
+        <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10">
+            </circle>
+        </svg><i class="ai-arrow-up"></i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../assets/vendor/img-comparison-slider/dist/index.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="../assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <!-- Main theme script-->
+    <script src="../assets/js/theme.min.js"></script>
+</body>
+
+</html>
